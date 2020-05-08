@@ -1,0 +1,13 @@
+//Parrafos con numeración
+.listed-paragraph {  
+  position: relative;
+  margin-left: 30px;  
+  .paragraph-num {
+    position: absolute;
+    left: -30px;
+    top: 0px;
+    color: $orange;
+    font-weight: 700;
+    font-size: 24px;   
+  }    
+}

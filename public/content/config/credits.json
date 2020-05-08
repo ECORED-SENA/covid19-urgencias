@@ -1,0 +1,21 @@
+[{
+    "department": "Centro de Gestión de Mercados, Logísticos y Tecnologías de la Información, Regional Distrito Capital.",
+    "left": [{
+        "name": "Nombre del encargado",
+        "title": "Experta temática"
+    }, {
+        "name": "Nombre del encargado",
+        "title": "Diseño instruccional"
+    }],
+    "right": [{
+        "name": "Nombre del encargado",
+        "title": "Evaluación instruccional"
+    }, {
+        "name": "Nombre del encargado",
+        "title": "Diseño web"
+    }, {
+        "name": "Nombre del encargado",
+        "title": "Producción Audiovisual"
+    }]
+
+}]

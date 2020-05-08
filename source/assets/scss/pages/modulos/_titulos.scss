@@ -1,0 +1,16 @@
+.tituloPrincipal {
+  position: relative;
+  padding: 0;    
+  &__txt {
+    h2 {
+      color: #002B45;          
+    }
+  }
+  &__icono {
+    position: relative;    
+    left: -15px;
+    width: 60px;
+    height: 4px;
+    background-color: $orange;
+  }
+}

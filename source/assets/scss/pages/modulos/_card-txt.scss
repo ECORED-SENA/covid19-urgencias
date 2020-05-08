@@ -1,0 +1,11 @@
+.card-txt {
+  padding: 2rem;
+  margin: 0;
+  background-color: #CBEEFF; 
+  border-bottom: 6px solid #57B8E8;
+  &__body {
+    &__copy{      
+      margin: 0;
+    }
+  }
+}

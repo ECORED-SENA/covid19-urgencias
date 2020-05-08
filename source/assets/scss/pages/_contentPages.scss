@@ -1,0 +1,112 @@
+/*-------------------------------
+SECCION OBJETIVOS TELESALUD
+--------------------------------*/
+
+.question {
+
+    margin-bottom: 2rem;
+
+    &-header {
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-bottom: 1.5rem;
+    }
+
+    &-number {
+
+        flex: 0 1 45px;
+        margin-right: 1rem;
+        padding: 0;
+        border-right: 5px solid #dfd4f8;
+        color: #dfd4f8;
+        font-size: 2.2rem;
+        font-weight: 700;
+        padding: 0 1rem;
+    }
+
+    &-title {
+
+        flex: 1 1 auto; 
+        color: #7750b4;
+        align-self: center;
+        
+    }
+
+    &-body {
+        padding: 1rem;
+        margin-left: 45px;
+
+        p {
+            margin-bottom: 1rem !important;
+        }
+    }
+
+
+}
+
+.section-header {
+    background-color: #59BFD6;
+    color: $white;
+    text-align: center;
+
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.objetivos article {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+.objetivos img {
+    flex: 0 0 87px;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+.objetivos h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    flex: 1 1 auto;
+}
+.objetivos p {
+    margin-bottom: 1rem;
+}
+
+.text-hero--white {
+  border-bottom: 4px solid #59BFD6;
+}
+/*---------------------------------------------
+EMPIEZAN LAS MEDIAS QUERIES
+--------------------------------------------*/
+
+@media (min-width: 768px) {
+
+    .objetivos article {
+        margin: 1rem 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center
+    }
+    .objetivos img {
+        overflow: hidden;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 1rem;
+        transition: all 1s ease
+    }
+    .objetivos article:hover img {
+        transform: rotateY(360deg);
+        transform-style: preserve-3d
+    }
+
+    .objetivos h3 {
+        margin: 0 0 .5rem 0;
+        flex: 0 1 auto;
+        width: 100%
+    }
+}
+

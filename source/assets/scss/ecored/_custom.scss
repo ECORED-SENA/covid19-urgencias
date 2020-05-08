@@ -1,0 +1,16 @@
+.card {
+	margin-bottom: 0px;
+}
+
+.container {
+  padding: 0 2rem;
+}
+// Reduce el padding Excesivo
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem !important;
+  }
+  .section__subtitle {
+    padding: 0 2rem;   
+  } 
+}

@@ -1,0 +1,164 @@
+section {
+  padding-bottom: 7rem;
+} 
+
+.header__programa {
+  padding: 2rem 1rem 5rem;
+  background:  #66C1CA;
+  background: url(../../content/images/header/header_pattern.svg) scroll top left repeat  #66C1CA;
+  height: auto;
+  background-attachment: scroll;
+  //background-position: top left;
+  //background-repeat: repeat;
+  //background-size: 1200px;
+
+  .header__nav    {
+    &__logo {    
+      svg {
+        width: 50px;
+        height: 50px;
+        #SENA_LOGO {
+          fill: #000;
+        }
+      }
+    }
+    &__items {    
+      a {
+        margin-left: 2rem;
+        font-family: $heading-font-family;
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #00223D;    
+      }  
+    }
+  }
+  .header__info {
+    margin-top: 4rem;
+    &__abstract {
+      padding-right: 3.5rem;
+      h1 {
+        color: #00223D;
+        font-weight: 600;
+      }   
+      h2, h3, p {
+        color: #00223D;
+      }
+    }
+  }
+}
+
+.section__subtitle {
+  h2 {
+    font-size: $h2-font-size;
+    font-weight: 600;
+  }
+}
+
+.horizontal-divider {
+  width: 60px;
+  height: 6px;
+  margin: 1.5rem 0 2rem 0;
+  background-color: $background-color-highlight;
+}
+
+.horizontal-divider-02 {
+  width: 45px;
+  height: 6px;
+  margin: 0.75rem 0;
+  background-color: $background-color-highlight;
+}
+
+.section_divider {
+  margin-bottom: 3rem;  
+  svg {
+    height: 45px;    
+  }
+}
+
+.svg_color01 {
+  #Poligono_1 {
+    fill: #66C1CA;
+  }
+}
+
+.svg_color02 {
+  #Poligono_1 {
+    fill: $base-color-light;
+  }
+}
+
+.bgColor-LightBaseColor {
+  background-color: $base-color-light;
+}
+
+.bgColor-NeutralBaseColor {
+  background-color: $white;
+}
+
+.txt__container {
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.35;
+  padding-bottom: 2rem;
+}
+
+footer {
+  padding: 3rem 0 1rem 0;
+  background-color: $background-color-gray;
+  border-bottom: 25px solid $background-color-dark;
+}
+
+.footer__header {
+  margin-bottom: 2rem;
+  &__logo {
+    img {
+      width: 70px;
+    }
+  }
+  &__texture { 
+    width: 100%;
+    height: 80px;  
+    background: url("../images/componente/footerDotPattern.png");
+    background-repeat: repeat;
+  }
+}
+.footer__info {
+  &__title {
+    h1 {
+      font-size: 26px;
+      font-weight: 600; 
+    }
+    .horizontal-divider-footer {
+      width: 45px;
+      height: 6px;
+      margin: 1rem 0 1.5rem 0;
+      background-color: $background-color-highlight;
+    }
+  }
+  &__subtitle {
+    h2 {
+      font-size: 18px;
+      font-weight: 600; 
+    }
+  }
+
+  &__column {
+    img {
+      max-width: 120px;     
+    }
+        
+    &__profile { 
+      margin-bottom: 2rem;
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      p { 
+        font-size: 14px;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}  

@@ -1,0 +1,42 @@
+#cont.container-fluid    
+    .row
+        #verticalNavbar.col-md-4.col-lg-3.collapse.width.show
+            .sidebar-sticky.pt-0
+                
+                ul#verticalNavbar__sidebar
+                    li
+                        a#verticalNavbar__title.verticalNavbar__link-active
+                            i.icon.index
+                            span#verticalNavbar__title__text índice temático.
+
+                ul#verticalNavbar__extra.col-md-4.col-lg-3.p-0.m-0.fixed-bottom.width.collapse.show
+
+
+        #contentCollapse.col-md-8.col-lg-9.ml-sm-auto.px-0.transition
+            header.header__unidad-tematica.mb-4
+                .header__curso
+                  .container                  
+                    .row.align-items-center 
+                      .header__curso__informacion.col-12.col-lg-6
+                        h2 Evento de divulgación tecnológica para la mitigación de la pandemia COVID-19
+                        h1.text-uppercase Manejo Clínico en Atención de Urgencias para pacientes con COVID-19
+                        .keywords
+                          span.badge.badge-pill.badge-light.mr-2 #Urgencias
+                          span.badge.badge-pill.badge-light.mr-2 #Pacientes
+                          span.badge.badge-pill.badge-light.mr-2 #sars-cov-2
+                        .barra-dots.mt-5
+                          img(src="../content/images/icon_dots.svg", alt="alt", class="img-fluid")
+                      .header__curso__media.col-lg-6.d-none.d-lg-block
+                        img(src="../content/images/header/header_media.svg", alt="")
+
+                .container
+                    h2#header__titleProgram.d-none                    
+                    h1#header__title.d-none
+
+                #header__breadcrumb
+                    .container
+                        #header__breadcrumb__content
+            
+            section#mainContent
+
+            include creditos.pug

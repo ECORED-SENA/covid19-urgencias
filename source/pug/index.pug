@@ -1,0 +1,239 @@
+doctype
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    title TELESALUD TE CUIDA
+    meta(meta name="description" content="En el siguiente evento de divulgación tecnológica (EDT), se desglosan en orden secuencial los cuidados y medidas a tener en cuenta por parte de las instituciones de salud, la comunidad y personal relacionado a todos los procesos desde el momento de la muerte de la persona positiva o sospechosa para COVID-19, hasta la disposición final del cadáver. ")    
+    link(rel="icon",type="image/svg+xml",href="assets/images/logos/senaLogo.svg")
+    link(rel="stylesheet", href="assets/fonts/feather/feather.css")
+    link(rel="stylesheet", href="assets/fonts/fontawesome/css/font-awesome.css")
+    link(href='assets/css/animate.css', rel='stylesheet')
+    link(rel="stylesheet", href="assets/css/main.css")
+
+  body
+    header.header__programa
+      .container 
+        .header__nav.row.align-items-center         
+          .header__nav__logo.col-1
+            include ../assets/images/logos/senaLogo.svg
+
+          .header__nav__items.col-11
+            .row.justify-content-end              
+              a(href="#resultados") objetivos
+              a(href="#temas") desarrollo de contenidos
+              a(href="#") créditos
+        .header__info.row.align-items-center
+          .header__info__abstract.col-12.col-lg-6
+            h3.animated.fadeInDown Evento de divulgación tecnológica para la mitigación de la pandemia COVID-19            
+            h1.wow.fadeIn(data-wow-delay=".3s") Manejo Clínico en Atención de Urgencias para pacientes con COVID-19
+            .horizontal-divider 
+            p.wow.fadeIn(data-wow-delay=".6s") Este evento de divulgación tecnológica (EDT), presenta a la comunidad y al personal en salud la Telesalud, como estrategia para mejorar el acceso, la resolutividad, la continuidad y la calidad de la atención clínica de pacientes sospechosos y diagnosticados con COVID-19, impactando la salud pública y la educación para la salud mediante el uso de las TIC 
+            <br/>     
+            a.btn.btn-danger(href="content/").wow.pulse(data-wow-delay=".12s") Ver contenidos        
+          .header__info__video.col-md-6.d-none.d-lg-block
+            img(src="../content/images/header/header_media.svg", alt="")
+
+    main
+      section#resultados.bgColor-LightBaseColor
+        .container
+          .row.justify-content-center.align-items-start
+            .section_divider.svg_color01
+              include ../assets/images/componente/sectionDivider.svg  
+        .container
+          .row
+            .section__subtitle
+              h2 Resultados de
+                br
+                |aprendizaje
+              .horizontal-divider
+
+          .row.justify-content-center             
+            .card__goal.col-10              
+              .card__goal__description
+                // span Cod  912948593
+                p Acercar el concepto de Telesalud y Telemedicina a la comunidad y al personal de salud, a fin de favorecer y regular el flujo normal de los servicios de atención en salud en Colombia frente a la pandemia de COVID-19     
+      section#temas.bgColor-NeutralBaseColor
+        .container
+          .row.justify-content-center.align-items-start
+            .section_divider.svg_color02
+              include ../assets/images/componente/sectionDivider.svg 
+        .container
+          .row
+            .section__subtitle
+              h2 Desarrollo de
+                br
+                |contenidos
+              .horizontal-divider
+
+          .row.justify-content-center
+            .col-12.col-sm-10
+              .card
+                .card-body
+                  ul.list-group.list-group-flush.list.my-n3.nav-temas
+                    li.list-group-item.nav-tema-item
+                      .row.align-items-center
+                        .col-auto
+                          .avatar.avatar-sm
+                            span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 1
+                        .col.ml-n2
+                          span.nav-tema-item__titulo 
+                            a(href="content/#page/introduccion/") Introducción
+                        .col-auto
+                          // Button
+                          a(href='content/#page/introduccion/').btn.btn-light.nav-tema-item__btn
+                            |Ver más
+                    li.list-group-item.nav-tema-item
+                      .row.align-items-center
+                        .col-auto
+                          .avatar.avatar-sm
+                            span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 2
+                        .col.ml-n2
+                          span.nav-tema-item__titulo 
+                            a(href="content/#page/prevencion-control-servicios-urgencias/") Prevención y control en el servicio de urgencias para atención de paciente con sospecha o diagnostico COVID-19.
+                        .col-auto
+                          // Button
+                          a(href='content/#page/prevencion-control-servicios-urgencias/').btn.btn-light.nav-tema-item__btn
+                            |Ver más
+                    li.list-group-item.nav-tema-item
+                      .row.align-items-center
+                        .col-auto
+                          .avatar.avatar-sm
+                            span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 3
+                        .col.ml-n2
+                          span.nav-tema-item__titulo 
+                            a(href="content/#page/atencion-inicial-urgencias/") Atención inicial de urgencias en pacientes sospechosos o con diagnostico de COVID-19. 
+                        .col-auto
+                          // Button
+                          a(href='content/#page/atencion-inicial-urgencias/').btn.btn-light.nav-tema-item__btn
+                            |Ver más
+
+                    li.list-group-item.nav-tema-item
+                      .row.align-items-center
+                        .col-auto
+                          .avatar.avatar-sm
+                            span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 4
+                        .col.ml-n2
+                          span.nav-tema-item__titulo 
+                            a(href="content/#page/areas-atencion-urgencias-covid19/") Áreas de atención en el servicio de urgencias de pacientes con sospecha de COVID-19 
+                        .col-auto
+                          // Button
+                          a(href='content/#page/areas-atencion-urgencias-covid19/').btn.btn-light.nav-tema-item__btn
+                            |Ver más
+
+                    li.list-group-item.nav-tema-item
+                      .row.align-items-center
+                        .col-auto
+                          .avatar.avatar-sm
+                            span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 5
+                        .col.ml-n2
+                          span.nav-tema-item__titulo 
+                            a(href="content/#page/medios-diagnostico-urgencias/") Medios de diagnóstico en el servicio de urgencias con pacientes con sospecha de COVID-19
+                        .col-auto
+                          // Button
+                          a(href='content/#page/medios-diagnostico-urgencias/').btn.btn-light.nav-tema-item__btn
+                            |Ver más
+
+                    li.list-group-item.nav-tema-item
+                      .row.align-items-center
+                        .col-auto
+                          .avatar.avatar-sm
+                            span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 6
+                        .col.ml-n2
+                          span.nav-tema-item__titulo 
+                            a(href="content/#page/tratamiento-paciente-covid19/") Tratamiento del paciente con COVID-19 en el servicio de Urgencias
+                        .col-auto
+                          // Button
+                          a(href='content/#page/tratamiento-paciente-covid19/').btn.btn-light.nav-tema-item__btn
+                            |Ver más
+             
+
+    footer
+      .container.footer__header
+        .row
+          .footer__info__title.col-2
+            h1 Créditos               
+            .horizontal-divider-footer
+
+      .container
+        .row.footer__info          
+          .footer__info__column.col-md-5        
+            .footer__info__column__profile
+              h2 Autor
+              p.mb-3
+                | #[strong Liliana Velez]<br/>
+                span.text-small Instructor
+                br
+                span.text-small.text-uppercase Centro Servicios de Salud - Antioquia
+
+              p.mb-3
+                | #[strong Dra. Nora Luz Salaza]<br/>
+                span.text-small Subdirectora
+                br
+                span.text-small.text-uppercase Centro Servicios de Salud - Antioquia
+
+
+            .footer__info__column__profile
+              h2 Revisión
+              p.mb-3 
+                strong Dr. Luis Gabriel Bernal
+                br
+                span.text-small Director Dirección Desarrollo Talento Humano en Salud
+                br
+                span.text-small.text-uppercase Ministerio de Salud y Protección Social
+
+              p.mb-3 
+                strong Francisco Ariza
+                br
+                span.text-small Grupo de Formación  THS
+                br
+                span.text-small.text-uppercase Ministerio de Salud y Protección Social
+
+              p.mb-3 
+                strong Silvia Mora
+                br
+                span.text-small Grupo de Formación  THS
+                br
+                span.text-small.text-uppercase Ministerio de Salud y Protección Social
+
+              p.mb-3 
+                strong Janeth Ramirez
+                br
+                span.text-small.text-uppercase Secretaría Departamental de Salud del Valle
+
+              p.mb-3
+                | #[strong Ruth Mireya Suárez]<br/>   
+                | #[strong Emilia Sarmiento]<br/>                
+                span.text-small.text-uppercase SENA - RED SALUD
+
+            
+          .footer__info__column.col-md-5  
+            .footer__info__column__profile
+              h2 Diseño y Desarrollo Recursos Educativos Digitales
+              p.mb-3
+                | #[strong Francisco José lizcano Reyes]<br/>
+                span.text-small Responsable del Equipo <br/>
+                span.text-small.text-uppercase CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA   
+            .footer__info__column__profile             
+              p.mb-3
+                | #[strong Lady Adriana Ariza Luque ]<br/>         
+                | #[strong Nelson Iván Vera Briceño]<br/>
+                | #[strong Daniel Ricardo Mutis Gómez]<br/>
+                | #[strong Carlos Julian Ramirez Benitez]<br/>
+                span.text-small Diseño Web <br/>
+                span.text-small.text-uppercase CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA  
+
+            .footer__info__column__profile             
+                p.mb-3
+                | #[strong Víctor Raúl Cárdenas Cáceres]<br/>         
+                span.text-small Producción audiovisual <br/>
+                span.text-small.text-uppercase CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA      
+
+          .footer__info__column.col-md-2  
+            .d-flex.flex-column
+              img(src="assets/images/logos/senaLogo.svg", alt="Logo SENA")
+
+
+
+    script(src="assets/js/plugins.js")
+    script(src="content/js/pages.js")

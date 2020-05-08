@@ -1,0 +1,40 @@
+.header__curso {
+  padding: 40px 0;  
+  background-image: url(../../content/images/header/header_pattern.svg);
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1200px;  
+  background-color: #66C1CA;
+  
+  &__informacion {
+    h1, h2 {
+      color:#00223D;
+    }
+    h1{
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    .barra-dots {
+      width: 240px;
+      max-width: 100%;  
+    }
+  }
+
+  &__media {
+    img {
+      width: 85%;
+    }
+  }
+}
+
+// Reduce el padding Excesivo
+@media (max-width: 768px) {
+  .header__curso {
+    padding: 40px
+    
+  }
+}

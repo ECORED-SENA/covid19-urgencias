@@ -1,0 +1,42 @@
+[
+  {
+    "letter": "c",
+    "terms": [
+      {
+        "title": "Caso probable",
+        "desciption": "Paciente con fiebre cuantificada mayor o igual a 38 °C y tos, con cuadro de infección respiratoria aguda grave -IRAG que desarrolla un curso clínico inusual o inesperado, especialmente un deterioro repentino a pesar del tratamiento adecuado, que, Sí requiere hospitalización, IRAG inusitado – Cód. 348 y cumpla con al menos una de las siguientes condiciones:<br><br><li>Historial de viaje a áreas con circulación de casos de enfermedad por nuevo coronavirus 2019 (COVID-19) en los 14 días anteriores al inicio de los síntomas. (Ver, tabla publicada en el micrositio del INS: http://www.ins.gov.co/Noticias/Paginas/Coronavirus.aspx </li><br><li>Trabajador de la salud u otro personal del ámbito hospitalario que haya tenido contacto estrecho* con caso confirmado para enfermedad por nuevo coronavirus (COVID-19). </li><br><li>Antecedentes de contacto estrecho* en los últimos 14 días con un caso confirmado con infección respiratoria aguda grave asociada al nuevo coronavirus 2019 (COVID-19).</li><br>"
+      },
+      {
+        "title": "Contacto estrecho comunitario",
+        "desciption": "Cualquier persona, con exposición no protegida, que haya compartido en un espacio menor a dos metros y por más de 15 minutos con una persona con diagnóstico confirmado de COVID-19 durante su periodo sintomático (esto puede incluir las personas que conviven, trabajan, visitantes a lugar de residencia); también haber estado en contacto sin protección adecuada con secreciones infecciosas (por ejemplo: secreciones o fluidos respiratorios o la manipulación de los pañuelos utilizados). "
+      }
+    ]
+  },
+  {
+    "letter": "e",
+    "terms": [
+      {
+        "title": "Epidemia",
+        "desciption": "Enfermedad que ataca a un gran número de personas o de animales en un mismo lugar y durante un mismo período de tiempo."  
+      }    
+    ]
+  },
+  {
+    "letter": "i",
+    "terms": [
+      {
+        "title": "IRAG Infección Respiratoria Aguda Grave (Cód. 345)",
+        "desciption": "Persona con infección respiratoria aguda con antecedentes de fiebre y tos no mayor a 10 días de evolución, que requiera manejo intrahospitalario."
+      }
+    ]
+  },
+  {
+    "letter": "p",
+    "terms": [
+      {
+        "title": "Pandemia",
+        "desciption": "Enfermedad epidémica que se extiende a muchos países o que ataca a casi todos los individuos de una localidad o región."
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+[{
+        "icon": "glossary",
+        "slug": "glosario",
+        "title": "Glosario",
+        "breadcrumb": ["Glosario"],
+        "path": "config/glosario.json"
+    },
+    {
+        "icon": "bibliography",
+        "slug": "referencias",
+        "title": "Referencias bibliográficas",
+        "breadcrumb": ["Referencias bibliográficas"],
+        "path": "pages/referencias.html"
+    }
+]

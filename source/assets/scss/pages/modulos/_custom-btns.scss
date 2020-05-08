@@ -1,0 +1,55 @@
+.btn-colour-Orange {
+  padding: 0.5rem 2rem;
+  color: #fff;
+  background-color: #FF6B00;
+  border-color: #FF6B00;
+  font-weight: bold;
+  letter-spacing: 0.05em; 
+}
+
+.btn-colour-Orange:hover,
+.btn-colour-Orange:active,
+.btn-colour-Orange:focus,
+.btn-colour-Orange.active {
+  /* let's darken #004E64 a bit for hover effect */
+  background: #CC5600;
+  color: #ffffff;
+  border-color: #CC5600;
+}
+
+// BTN Enlaces a recursos externos
+.media-link-btn {
+  margin: 2rem 0;
+  .media-link {
+    display: block;    
+    &:hover{
+      .media-link-btn__container {
+        background-color: rgb(168, 211, 233); 
+      }
+    }    
+    .media-link-btn__container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap !important;
+      justify-content: start;
+      padding: 1rem;
+      background-color: rgb(176, 208, 224);  
+      border-radius: 7px;  
+      -webkit-transition: background-color 0.25s ease-out;
+      -moz-transition: background-color 0.25s ease-out;
+      -o-transition: background-color 0.25s ease-out;
+      transition: background-color 0.25s ease-out;
+      .media-link-btn__icon {
+        display: block;         
+        min-width: 45px;
+        height: auto;               
+        margin-right: 10px;       
+      }
+      .media-link-btn__copy {
+        p {
+          margin: 0 !important;
+        }      
+      }    
+    }
+  }  
+}

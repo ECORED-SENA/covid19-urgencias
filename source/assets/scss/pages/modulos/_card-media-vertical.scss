@@ -1,0 +1,34 @@
+.card-media-vertical {  
+  box-sizing: border-box;
+  position: relative; 
+  height: 300px;
+  padding: 8rem 1.5rem 1.5rem 1.5rem;
+  margin: 8rem 0.75rem 0 0.75rem; 
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  background-color: #CBEEFF; 
+  &__body {    
+    .card__figure {
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 200px;      
+      img {
+        width: 100%;
+      }
+    }     
+    .card__copy{
+      margin: 0;
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+  .card-media-vertical {       
+    height: auto;
+  }    
+}
