@@ -1,15 +1,22 @@
-[   {
-        "icon": "document",
+[   
+    {
+      "icon": "fa fa-1x fa-home",
+      "slug": "external",
+      "title": "Volver al inicio",
+      "path": "../index.html"
+    },  
+    {
+        "icon": "video",
         "slug": "introduccion",
         "title": "1. Introduccion",
-        "breadcrumb": ["inicio","Introducción"],
+        "breadcrumb": ["Inicio","Introducción"],
         "path": "pages/1-0-introduccion.html"        
     },
     {
         "icon": "video",
         "slug": "prevencion-control-servicios-urgencias",
         "title": "2. Prevención y control en el servicio de urgencias para atención de paciente con sospecha o diagnostico COVID-19.",
-        "breadcrumb": ["inicio", "Prevención y control en el servicio de urgencias"],
+        "breadcrumb": ["Inicio", "Prevención y control en el servicio de urgencias"],
         "path": "pages/2-0-prevencion-control-servicios.html"    
                 
     },    
@@ -18,7 +25,7 @@
       "slug": "atencion-inicial-urgencias",
       "title": "3. Atención inicial de urgencias en pacientes sospechosos o con diagnostico de COVID-19",
       "breadcrumb": [
-        "inicio",
+        "Inicio",
         "Atención inicial de urgencias "
       ],
       "path": "pages/3-0-atencion-inicial-urgencias.html"
@@ -27,25 +34,25 @@
       "slug": "areas-atencion-urgencias-covid19",
       "title": "4. Áreas de atención en el servicio de urgencias de pacientes con sospecha de COVID-19",
       "breadcrumb": [
-        "inicio",
+        "Inicio",
         "Áreas de atención en el servicio de urgencias "
       ],
       "path": "pages/4-0-areas-atencion-urgencias.html"
     },{
-      "icon": "document",
+      "icon": "video",
       "slug": "medios-diagnostico-urgencias",
       "title": "5. Medios de diagnóstico en el servicio de urgencias con pacientes con sospecha de COVID-19",
       "breadcrumb": [
-        "inicio",
+        "Inicio",
         "Medios de diagnóstico en el servicio de urgencias"
       ],
       "path": "pages/5-0-medios-diagnostico-urgencias.html"
     },{
-      "icon": "document",
+      "icon": "video",
       "slug": "tratamiento-paciente-covid19",
       "title": "6. Tratamiento del paciente con COVID-19 en el servicio de Urgencias",
       "breadcrumb": [
-        "inicio",
+        "Inicio",
         "Tratamiento del paciente con COVID-19"
       ],
       "path": "pages/6-0-tratamiento-paciente-covid19.html"

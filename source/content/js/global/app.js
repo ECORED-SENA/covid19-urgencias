@@ -8,7 +8,7 @@ function renderHeaderAndBreadcrumb(titleHeader, breadcrumb) {
     let breadcrumbContent = document.getElementById('header__breadcrumb__content');
     let htmlBreadcrumb = "";
     breadcrumbContent.innerHTML = "";
-    breadcrumb.forEach(function(span) { htmlBreadcrumb += '<span><i class="icon chevron"></i></span><span class="px-1">' + span + '</span>'; });
+    breadcrumb.forEach(function (span) { htmlBreadcrumb += '<span><i class="icon chevron"></i></span><span class="px-1">' + span + '</span>'; });
     breadcrumbContent.insertAdjacentHTML('beforeend', htmlBreadcrumb);
 }
 
@@ -20,7 +20,7 @@ function renderContent(slug, anchor) {
         renderHeaderAndBreadcrumb(contentObject.title, contentObject.breadcrumb);
         if (contentObject.path.length > 0) {
             if ($('video').length > 0) {
-                $('video').each(function() {
+                $('video').each(function () {
                     this.pause();
                     this.src = '';
                     this.currentSrc = '';
@@ -46,17 +46,20 @@ function renderContent(slug, anchor) {
 var menuMain = "";
 
 function createMenu(navBar) {
-    navBar.forEach(function(button) {
-        sessionStorage.setItem(button.slug, JSON.stringify(button));
+    navBar.forEach(function (button) {
         let idTag = '';
         let dataAnchor = '';
         var selectClass = 'verticalNavbar__menuMain';
         if (button.id != undefined && button.id.length > 0) { idTag = button.id }
-        if (button.anchor != undefined && button.anchor.length > 0) {
-            selectClass = 'routerAnchor';
-            dataAnchor = 'data-anchor="' + button.anchor + '"';
+        if (button.slug == "external" || button.slug == "externo" || button.slug == "pdf") {
+            menuMain = menuMain + '<li class="nav-item"><a id="' + idTag + '" class="verticalNavbar__navLink nav-link transition" href="' + button.path + '"><span class="col-11 d-inline-block">' + button.title + '</span><span class="p-0 col-1 d-inline-block icon-content text-center"><i class="icon ' + button.icon + ' mx-auto"></i></span></a></li>';
+        } else {
+            if (button.anchor != undefined && button.anchor.length > 0) {
+                selectClass = 'routerAnchor';
+                dataAnchor = 'data-anchor="' + button.anchor + '"';
+            } else { sessionStorage.setItem(button.slug, JSON.stringify(button)); }
+            menuMain = menuMain + '<li class="nav-item"><a id="' + idTag + '" class="verticalNavbar__navLink nav-link verticalNavbar__navLink-render ' + selectClass + ' transition" data-route="' + button.slug + '" ' + dataAnchor + '><span class="col-11 d-inline-block">' + button.title + '</span><span class="p-0 col-1 d-inline-block icon-content text-center"><i class="icon ' + button.icon + ' mx-auto"></i></span></a></li>';
         }
-        menuMain = menuMain + '<li class="nav-item"><a id="' + idTag + '" class="verticalNavbar__navLink nav-link ' + selectClass + ' transition" data-route="' + button.slug + '" ' + dataAnchor + '><span class="col-11 d-inline-block">' + button.title + '</span><span class="p-0 col-1 d-inline-block icon-content text-center"><i class="icon ' + button.icon + ' mx-auto"></i></span></a></li>';
         if (button.submenu && button.submenu.length != 0) {
             menuMain = menuMain + '<ul class="submenu">';
             createMenu(button.submenu)
@@ -70,8 +73,8 @@ function renderNavbar(data) {
     createMenu(data);
     verticalNavbar.insertAdjacentHTML('beforeend', menuMain);
     let verticalNavbarMain = document.getElementsByClassName('verticalNavbar__menuMain');
-    Array.from(verticalNavbarMain).forEach(function(button) {
-        button.addEventListener('click', function() {
+    Array.from(verticalNavbarMain).forEach(function (button) {
+        button.addEventListener('click', function () {
             let route = button.getAttribute("data-route");
             $.routes.find('path').routeTo({ slug: route });
             document.getElementById("verticalNavbar__title").classList.add("verticalNavbar__title-active");
@@ -81,8 +84,8 @@ function renderNavbar(data) {
         });
     });
     let verticalNavbarAnchor = document.getElementsByClassName('routerAnchor');
-    Array.from(verticalNavbarAnchor).forEach(function(button) {
-        button.addEventListener('click', function() {
+    Array.from(verticalNavbarAnchor).forEach(function (button) {
+        button.addEventListener('click', function () {
             let route = button.getAttribute("data-route");
             let anchor = button.getAttribute("data-anchor");
             $.routes.find('anchor').routeTo({ slug: route, anchor: anchor });
@@ -96,12 +99,12 @@ function renderNavbar(data) {
 
 function renderNavbarExtras(navBar) {
     let verticalNavbar = document.getElementById("verticalNavbar__extra");
-    navBar.forEach(function(button, i) {
+    navBar.forEach(function (button, i) {
         sessionStorage.setItem(button.slug, JSON.stringify(button));
         let htmlExtra;
-        if (button.slug == "external" || button.slug == "externo" || button.slug == "pdf") { htmlExtra = '<li class="nav-item"><a class="verticalNavbar__navLink nav-link verticalNavbar__menuExtra transition" href="' + button.path + '" target="_blank"><span><i class="icon ' + button.icon + '"></i></span>' + button.title + '</a></li>'; } else { htmlExtra = '<li class="nav-item"><a class="verticalNavbar__navLink nav-link verticalNavbar__menuExtra transition" data-route="' + button.slug + '"><span><i class="icon ' + button.icon + '"></i></span>' + button.title + '</a></li>'; }
+        if (button.slug == "external" || button.slug == "externo" || button.slug == "pdf") { htmlExtra = '<li class="nav-item"><a class="verticalNavbar__navLink nav-link verticalNavbar__menuExtra transition" href="' + button.path + '" target="_blank"><span><i class="icon ' + button.icon + '"></i></span>' + button.title + '</a></li>'; } else { htmlExtra = '<li class="nav-item"><a class="verticalNavbar__navLink nav-link verticalNavbar__menuExtra verticalNavbar__navLink-render transition" data-route="' + button.slug + '"><span><i class="icon ' + button.icon + '"></i></span>' + button.title + '</a></li>'; }
         verticalNavbar.insertAdjacentHTML('beforeend', htmlExtra);
-        document.getElementsByClassName('verticalNavbar__menuExtra')[i].addEventListener('click', function() {
+        document.getElementsByClassName('verticalNavbar__menuExtra')[i].addEventListener('click', function () {
             $.routes.find('path').routeTo({ slug: this.getAttribute("data-route") });
             if ($(window).width() < 720) { $(".navbar-toggler").click(); }
             document.getElementById("verticalNavbar__title").classList.remove("verticalNavbar__title-active");
@@ -112,6 +115,7 @@ function renderNavbarExtras(navBar) {
     document.getElementById("verticalNavbar__sidebar").style.maxHeight = (window.innerHeight - ($('#verticalNavbar__extra .nav-item')[0].offsetHeight * navBar.length)) + "px";
 }
 
+
 async function renderGlossary(slug) {
     let item = sessionStorage.getItem(slug);
     contentObject = JSON.parse(item);
@@ -120,16 +124,19 @@ async function renderGlossary(slug) {
     mainContent.textContent = "";
     $("body").loader('show');
     await loadJSON(contentObject.path).then(data => {
-        let htmlGlossary = '<div id="row" class="content"><div class="col-md-10 mx-auto">';
-        data.forEach(function(letter) {
+        let htmlGlossary = '<div class="container"><div id="row" class="content"><div class="col-12">';
+        data.forEach(function (letter) {
             htmlGlossary += '<table class="glossary"><thead><tr><th scope="col">' + letter.letter + '</th></tr></thead><tbody>';
-            letter.terms.forEach(function(term) { htmlGlossary += '<tr><td class="title">' + term.title + '</td><td>' + term.desciption + '</td></tr>'; });
+            letter.terms.forEach(function (term) { htmlGlossary += '<tr><td class="title">' + term.title + '</td><td>' + term.desciption + '</td></tr>'; });
             htmlGlossary += '</tbody><table>';
         });
-        htmlGlossary += '</div></div>';
+        htmlGlossary += '</div></div></div>';
         mainContent.innerHTML = htmlGlossary;
-    }).then(function() { $("body").loader('hide'); });
+    }).then(function () { $("body").loader('hide'); });
+
+    $('body,html').stop(true, true).animate({ scrollTop: 0 }, 1000);
 }
+
 
 function renderConfig(data) {
     document.getElementById('header__titleProgram').textContent = data.programName;
@@ -139,18 +146,18 @@ function renderConfig(data) {
 
 function renderCredits(data) {
     let footer = document.getElementById("footer__credits");
-    data.forEach(function(row) {
+    data.forEach(function (row) {
         let htmlCredit = '<p class="footer__credits__title col-sm-12">' + row.department + '</p><div class="col-sm-12 col-md-6">';
-        row.left.forEach(function(person, i) { htmlCredit += '<p class="footer__credits__title">' + person.title + '</p><p class="footer__credits__name">' + person.name + '</p>'; });
+        row.left.forEach(function (person, i) { htmlCredit += '<p class="footer__credits__title">' + person.title + '</p><p class="footer__credits__name">' + person.name + '</p>'; });
         htmlCredit += '</div><div class="col-sm-12 col-md-6">'
-        row.right.forEach(function(person, i) { htmlCredit += '<p class="footer__credits__title">' + person.title + '</p><p class="footer__credits__name">' + person.name + '</p>'; });
+        row.right.forEach(function (person, i) { htmlCredit += '<p class="footer__credits__title">' + person.title + '</p><p class="footer__credits__name">' + person.name + '</p>'; });
         htmlCredit += '</div>';
         footer.insertAdjacentHTML('beforeend', htmlCredit);
     });
 }
 
 async function renderInitialContent() {
-    let navItems = Array.from(document.getElementsByClassName('verticalNavbar__navLink'));
+    let navItems = Array.from(document.getElementsByClassName('verticalNavbar__navLink-render'));
     if (!(window.location.hash[window.location.hash.length - 1] == '/')) { window.location.hash = window.location.hash + '/'; }
     if (window.location.hash.length > 2) {
         baseRoutesLength = baseRoutes.length + 2; // length plus # and /
@@ -166,7 +173,7 @@ async function renderInitialContent() {
     } else { navItems[0].click(); }
 }
 
-document.addEventListener("DOMContentLoaded", async function() {
+document.addEventListener("DOMContentLoaded", async function () {
     $("body").loader('show');
     await loadJSON('config/global.json').then(data => { renderConfig(data); });
     await loadJSON('config/menuMain.json').then(data => { renderNavbar(data); });
@@ -175,7 +182,6 @@ document.addEventListener("DOMContentLoaded", async function() {
     renderInitialContent();
     $("body").loader('hide');
 });
-
 
 $(document).ready(() => {
   $('.navbar-toggler').click(() => {
@@ -191,8 +197,19 @@ $(document).ready(() => {
   });
 });
 
-
 $(function () {
-  $('[data-toggle="popover"]').popover()
+    $('[data-toggle="popover"]').popover()
+
+    $('[data-fancybox="gallery"]').fancybox({
+        // Options will go here
+    });
+
+    $(".nav-tema-item__titulo").hover(function () {
+        $(this).closest('.nav-tema-item__icon').addClass('bg-color-base');
+        alert('ntramos')
+    }, function () {
+        $(this).closest('.nav-tema-item__icon').removeClass('bg-color-base');
+    });
+
 })
 

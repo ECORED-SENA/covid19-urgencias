@@ -4,13 +4,13 @@ html(lang="es")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
-    title TELESALUD TE CUIDA
-    meta(meta name="description" content="En el siguiente evento de divulgación tecnológica (EDT), se desglosan en orden secuencial los cuidados y medidas a tener en cuenta por parte de las instituciones de salud, la comunidad y personal relacionado a todos los procesos desde el momento de la muerte de la persona positiva o sospechosa para COVID-19, hasta la disposición final del cadáver. ")    
+    title EDT-Manejo del paciente en Urgencias con Infección Respiratoria Aguda-Grave COVID-19
+    meta(meta name="description" content="Este Evento de Divulgación Tecnológica está dirigido al Talento Humano en Salud que desempeña su labor en los servicios de Urgencias, respondiendo a los lineamientos de la Organización Mundial de la Salud (OMS) y el Gobierno Nacional para desarrollar  el plan  de  acción  en la fase de mitigación del Virus.")    
     link(rel="icon",type="image/svg+xml",href="assets/images/logos/senaLogo.svg")
     link(rel="stylesheet", href="assets/fonts/feather/feather.css")
     link(rel="stylesheet", href="assets/fonts/fontawesome/css/font-awesome.css")
     link(href='assets/css/animate.css', rel='stylesheet')
-    link(rel="stylesheet", href="assets/css/main.css")
+    link(rel="stylesheet", href="assets/css/main.css?v=4")
 
   body
     header.header__programa
@@ -27,11 +27,11 @@ html(lang="es")
         .header__info.row.align-items-center
           .header__info__abstract.col-12.col-lg-6
             h3.animated.fadeInDown Evento de divulgación tecnológica para la mitigación de la pandemia COVID-19            
-            h1.wow.fadeIn(data-wow-delay=".3s") Manejo Clínico en Atención de Urgencias para pacientes con COVID-19
+            h1.wow.fadeIn(data-wow-delay=".3s") EDT-Manejo del paciente en Urgencias con Infección Respiratoria Aguda-Grave COVID-19
             .horizontal-divider 
-            p.wow.fadeIn(data-wow-delay=".6s") Este evento de divulgación tecnológica (EDT), presenta a la comunidad y al personal en salud la Telesalud, como estrategia para mejorar el acceso, la resolutividad, la continuidad y la calidad de la atención clínica de pacientes sospechosos y diagnosticados con COVID-19, impactando la salud pública y la educación para la salud mediante el uso de las TIC 
+            p.wow.fadeIn(data-wow-delay=".6s") Este Evento de Divulgación Tecnológica está dirigido al Talento Humano en Salud que desempeña su labor en los servicios de Urgencias, respondiendo a los lineamientos de la Organización Mundial de la Salud (OMS) y el Gobierno Nacional para desarrollar  el plan  de  acción  en la fase de mitigación del Virus.
             <br/>     
-            a.btn.btn-danger(href="content/").wow.pulse(data-wow-delay=".12s") Ver contenidos        
+            a.btn.btn-danger(href="content/index.html", data-wow-delay=".12s").wow.pulse Ver contenidos        
           .header__info__video.col-md-6.d-none.d-lg-block
             img(src="../content/images/header/header_media.svg", alt="")
 
@@ -44,16 +44,14 @@ html(lang="es")
         .container
           .row
             .section__subtitle
-              h2 Resultados de
-                br
-                |aprendizaje
+              h2 Objetivos
               .horizontal-divider
 
           .row.justify-content-center             
             .card__goal.col-10              
               .card__goal__description
                 // span Cod  912948593
-                p Acercar el concepto de Telesalud y Telemedicina a la comunidad y al personal de salud, a fin de favorecer y regular el flujo normal de los servicios de atención en salud en Colombia frente a la pandemia de COVID-19     
+                p Aplicar protocolo de atención de pacientes con infección respiratoria aguda grave (IRAG)  causada por COVID-19 en las áreas de urgencias y hospitalización de urgencias de acuerdo con lineamientos de la Organización Mundial de la Salud.  
       section#temas.bgColor-NeutralBaseColor
         .container
           .row.justify-content-center.align-items-start
@@ -79,10 +77,10 @@ html(lang="es")
                             span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 1
                         .col.ml-n2
                           span.nav-tema-item__titulo 
-                            a(href="content/#page/introduccion/") Introducción
+                            a(href="content/index.html#page/introduccion/") Introducción
                         .col-auto
                           // Button
-                          a(href='content/#page/introduccion/').btn.btn-light.nav-tema-item__btn
+                          a(href='content/index.html#page/introduccion/').btn.btn-light.nav-tema-item__btn
                             |Ver más
                     li.list-group-item.nav-tema-item
                       .row.align-items-center
@@ -91,10 +89,10 @@ html(lang="es")
                             span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 2
                         .col.ml-n2
                           span.nav-tema-item__titulo 
-                            a(href="content/#page/prevencion-control-servicios-urgencias/") Prevención y control en el servicio de urgencias para atención de paciente con sospecha o diagnostico COVID-19.
+                            a(href="content/index.html#page/prevencion-control-servicios-urgencias/") Prevención y control en el servicio de urgencias para atención de paciente con sospecha o diagnostico COVID-19.
                         .col-auto
                           // Button
-                          a(href='content/#page/prevencion-control-servicios-urgencias/').btn.btn-light.nav-tema-item__btn
+                          a(href='content/index.html#page/prevencion-control-servicios-urgencias/').btn.btn-light.nav-tema-item__btn
                             |Ver más
                     li.list-group-item.nav-tema-item
                       .row.align-items-center
@@ -103,10 +101,10 @@ html(lang="es")
                             span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 3
                         .col.ml-n2
                           span.nav-tema-item__titulo 
-                            a(href="content/#page/atencion-inicial-urgencias/") Atención inicial de urgencias en pacientes sospechosos o con diagnostico de COVID-19. 
+                            a(href="content/index.html#page/atencion-inicial-urgencias/") Atención inicial de urgencias en pacientes sospechosos o con diagnostico de COVID-19. 
                         .col-auto
                           // Button
-                          a(href='content/#page/atencion-inicial-urgencias/').btn.btn-light.nav-tema-item__btn
+                          a(href='content/index.html#page/atencion-inicial-urgencias/').btn.btn-light.nav-tema-item__btn
                             |Ver más
 
                     li.list-group-item.nav-tema-item
@@ -116,10 +114,10 @@ html(lang="es")
                             span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 4
                         .col.ml-n2
                           span.nav-tema-item__titulo 
-                            a(href="content/#page/areas-atencion-urgencias-covid19/") Áreas de atención en el servicio de urgencias de pacientes con sospecha de COVID-19 
+                            a(href="content/index.html#page/areas-atencion-urgencias-covid19/") Áreas de atención en el servicio de urgencias de pacientes con sospecha de COVID-19 
                         .col-auto
                           // Button
-                          a(href='content/#page/areas-atencion-urgencias-covid19/').btn.btn-light.nav-tema-item__btn
+                          a(href='content/index.html#page/areas-atencion-urgencias-covid19/').btn.btn-light.nav-tema-item__btn
                             |Ver más
 
                     li.list-group-item.nav-tema-item
@@ -129,10 +127,10 @@ html(lang="es")
                             span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 5
                         .col.ml-n2
                           span.nav-tema-item__titulo 
-                            a(href="content/#page/medios-diagnostico-urgencias/") Medios de diagnóstico en el servicio de urgencias con pacientes con sospecha de COVID-19
+                            a(href="content/index.html#page/medios-diagnostico-urgencias/") Medios de diagnóstico en el servicio de urgencias con pacientes con sospecha de COVID-19
                         .col-auto
                           // Button
-                          a(href='content/#page/medios-diagnostico-urgencias/').btn.btn-light.nav-tema-item__btn
+                          a(href='content/index.html#page/medios-diagnostico-urgencias/').btn.btn-light.nav-tema-item__btn
                             |Ver más
 
                     li.list-group-item.nav-tema-item
@@ -142,10 +140,10 @@ html(lang="es")
                             span.nav-tema-item__icon.avatar-title.font-size-lg.bg-secondary-soft.rounded-circle.text-primary.font-weight-bold 6
                         .col.ml-n2
                           span.nav-tema-item__titulo 
-                            a(href="content/#page/tratamiento-paciente-covid19/") Tratamiento del paciente con COVID-19 en el servicio de Urgencias
+                            a(href="content/index.html#page/tratamiento-paciente-covid19/") Tratamiento del paciente con COVID-19 en el servicio de Urgencias
                         .col-auto
                           // Button
-                          a(href='content/#page/tratamiento-paciente-covid19/').btn.btn-light.nav-tema-item__btn
+                          a(href='content/index.html#page/tratamiento-paciente-covid19/').btn.btn-light.nav-tema-item__btn
                             |Ver más
              
     +creditosFooter("assets/images/logos/senaLogo.svg")
