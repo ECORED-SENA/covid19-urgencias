@@ -8,11 +8,7 @@
 //
 
 a {
-  color: #12263F;
   text-decoration: none;
-  &:hover {
-    color: lighten(#12263F, 15%);
-  }
 }
 
 h1, .h1 {
